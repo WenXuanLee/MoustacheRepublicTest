@@ -18,8 +18,8 @@ new Vue ({
         L: false
       },
       miniCart: {
-        S: 1,
-        M: 3,
+        S: 0,
+        M: 0,
         L: 0
       }
     },

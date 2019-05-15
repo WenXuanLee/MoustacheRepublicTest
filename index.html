@@ -17,16 +17,19 @@
                             @mouseover="isShowMiniCart = true"
                             @mouseleave="isShowMiniCart = false">My Cart( {{ cartTotalCount }} )</div>
                         <div v-if="isShowMiniCart" class="dropdown-content">
-                            <div v-for="(sizeNum, key, index) in filterCart"
-                                :key="index"
-                                class="dropdown-item">
-                                <div class="dropdown-img">
-                                    <img class="small-image" src="./img/classic-tee.jpg" alt="classic-Tee">
-                                </div>
-                                <div class="dropdown-intro medium-text">
-                                    <span class="">Classic Tee</span>
-                                    <p class="intro-price-break">{{ sizeNum}}x  <span class="intro-price">$75.00</span></p>  
-                                    <p class="">Size: {{ key }}</p>                              
+                            <div v-if="cartTotalCount === 0">no item in cart</div>
+                            <div v-else>
+                                <div v-for="(sizeNum, key, index) in filterCart"
+                                    :key="index"
+                                    class="dropdown-item">
+                                    <div class="dropdown-img">
+                                        <img class="small-image" src="./img/classic-tee.jpg" alt="classic-Tee">
+                                    </div>
+                                    <div class="dropdown-intro medium-text">
+                                        <span class="">Classic Tee</span>
+                                        <p class="intro-price-break">{{ sizeNum}}x  <span class="intro-price">$75.00</span></p>  
+                                        <p class="">Size: {{ key }}</p>                              
+                                    </div>
                                 </div>
                             </div>
                         </div>
