@@ -117,3 +117,39 @@ body {
   color: #ffffff;
   background-color: #222222;
 }
+/* mini cart css */
+.dropdown-block {
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8px;
+  right: 0;
+  min-width: 21vw;
+  border: 1px solid #888888;
+}
+.dropdown-content .small-image {
+  height: 110px;
+  width: 72px;
+}
+.dropdown-content .dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 1vw;
+  margin-bottom: 1vh;
+}
+.dropdown-content .dropdown-intro {
+  margin-left: 1vw;
+}
+.dropdown-content .dropdown-intro .intro-price-break {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.dropdown-content .dropdown-intro .intro-price {
+  color: #222222;
+  font-weight: 600;
+}
