@@ -1,0 +1,72 @@
+/* color variables */
+@header-background: #F6F6F7;
+@notice-red: #C90000;
+@light-grey: #CCCCCC;
+@basic-grey: #888888;  /* for basic text and border */
+@dark-grey: #222222;   /* for dark text and deep border */
+@border-grey: #f8f8f8;
+@white: #ffffff;
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.main {
+    width: 100%;
+}
+
+/* typology setting */
+.small-text {
+    font-size: 12px;
+}
+
+.medium-text {
+    font-size: 14px;
+}
+
+.large-text {
+    font-size: 16px;
+}
+
+.notice-text {
+    color: @notice-red;
+}
+
+/* header part */
+.header-section {
+    padding-top: 3vh;
+}
+
+.navbar-content { 
+    background-color: @header-background;
+}
+
+.navbar-block {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 10vw;
+
+    .navbar-link {
+        cursor: pointer;
+        color: @basic-grey;
+        padding: 1vh 0;
+    }
+}
+
+.main-section {
+    margin-top: 5vh;
+    padding: 0 9vw;
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FancyMoustacheRepublic!</title>   
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+ 
+</head>
+<body> 
+    <div class="main">
+        <header class="header-section">
+            <div class="navbar-content">
+                <div class="navbar-block">
+                    <div class="navbar-link small-text" >My Cart( 4 )</div>
+                </div>
+            </div>
+        </header>
+        <div class="main-section">
+            <div class="main-content">
+                <div class="image-section">
+                    <div class="image-block">
+                        <img class="image-sample" src="./img/classic-tee.jpg" alt="classic-Tee">
+                    </div>
+                </div>
+                <div class="intro-section">
+                    <div class="intro-content">
+                        <p class="intro-header">Classic Tee</p>
+                        <p class="intro-price">$75.00</p>
+                        <div class="intro-descrip">
+                            Dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem ratione actum est, id officium appellamus dolor sit amet.<br>consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem ratione actum est, id officium appellamus dolor sit amet.
+                        </div>
+                    </div>
+                    <div class="select-content">
+                        <div class="select-header">SIZE<span class="notice-text">*</span>S</div>
+                        <div class="select-block">
+                            <div class="select-btn">S</div>
+                            <div class="select-btn">M</div>
+                            <div class="select-btn">L</div>
+                        </div>
+                        <div class="select-btn-add medium-text" @click="checkAddToCart()">ADD TO CART</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- import personal js -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>
