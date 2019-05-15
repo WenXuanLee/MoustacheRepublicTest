@@ -8,11 +8,11 @@
  
 </head>
 <body> 
-    <div class="main">
+    <div class="main" id="app">
         <header class="header-section">
             <div class="navbar-content">
                 <div class="navbar-block">
-                    <div class="navbar-link small-text" >My Cart( 4 )</div>
+                    <div class="navbar-link small-text">My Cart( {{ cartTotalCount }} )</div>
                 </div>
             </div>
         </header>
@@ -27,16 +27,18 @@
                     <div class="intro-content">
                         <p class="intro-header">Classic Tee</p>
                         <p class="intro-price">$75.00</p>
-                        <div class="intro-descrip">
+                        <div class="intro-descrip medium-text">
                             Dolor sit amet, consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem ratione actum est, id officium appellamus dolor sit amet.<br>consectetur adipiscing elit. Haec et tu ita posuisti, et verba vestra sunt. Quod autem ratione actum est, id officium appellamus dolor sit amet.
                         </div>
                     </div>
                     <div class="select-content">
-                        <div class="select-header">SIZE<span class="notice-text">*</span>S</div>
-                        <div class="select-block">
-                            <div class="select-btn">S</div>
-                            <div class="select-btn">M</div>
-                            <div class="select-btn">L</div>
+                        <div class="select-header small-text ">SIZE<span class="notice-text">*</span><span class="select-size">{{ selectedSize }}</span></div>
+                        <div class="select-block small-text">
+                            <div v-for="(option, key) in sizeOptions" 
+                                :key="key" 
+                                class="select-btn" 
+                                :class="{ selected: option }" 
+                                @click="selectSize(key)">{{ key }}</div>
                         </div>
                         <div class="select-btn-add medium-text" @click="checkAddToCart()">ADD TO CART</div>
                     </div>
@@ -44,6 +46,8 @@
             </div>
         </div>
     </div>
+    <!-- import vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script> 
     <!-- import personal js -->
     <script src="js/index.js"></script>
 </body>
